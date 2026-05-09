@@ -105,7 +105,7 @@ El archivo [`main.c`](/c:/Users/57318/EAFIT/Semestre_6/Sistemas_operativos/Proye
 
 ## Requisitos
 
-Para compilar el proyecto se necesita:
+Para compilar el proyecto se necesita lo siguiente:
 
 - Compilador `gcc`
 - `make` opcional
