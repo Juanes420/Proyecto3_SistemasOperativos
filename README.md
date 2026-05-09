@@ -202,7 +202,7 @@ El `header` debe medir exactamente `64` bytes. Por eso el diseño usa `__attribu
 
 ## Requisitos
 
-Para compilar el proyecto se necesita:
+Para compilar el proyecto se necesita lo siguiente:
 
 - Compilador `gcc`
 - `make` opcional
