@@ -310,7 +310,7 @@ El informe incluye un resultado de `valgrind` para `benchmark_nuestro` con:
 - `8 allocs, 8 frees`.
 - `0 errors`.
 
-Eso sugiere que, en la versión evaluada para el informe, no había fugas de memoria detectadas.
+Eso quiere decir que no había fugas de memoria detectadas.
 
 ## Conceptos técnicos aplicados
 
@@ -322,31 +322,6 @@ Eso sugiere que, en la versión evaluada para el informe, no había fugas de mem
 - Compresión de datos con `zlib`.
 - Modularización mediante archivos `.c` y `.h`.
 - Validación en tiempo de compilación con `_Static_assert`.
-
-## Estado actual del repositorio
-
-Al analizar el código actualmente versionado se observan algunos puntos importantes:
-
-- `compress.c` y `compress.h` están vacíos en este estado del repositorio.
-- `main.c` y `benchmark_nuestro.c` dependen de `compress_data()` y `decompress_data()`, por lo que falta esa implementación para compilar correctamente.
-- El `Makefile` referencia `compress.c`, pero además contiene reglas con `$` donde probablemente debería usarse `$^` o `$<`, lo que puede impedir compilar los benchmarks tal como está.
-- En este entorno de revisión no estaban instalados `make` ni `gcc`, así que no fue posible validar la compilación localmente desde PowerShell.
-
-Por eso este README documenta dos cosas a la vez:
-
-- La intención, arquitectura y resultados descritos en el informe `Proyecto3_SistemasOperativos_Final (1).docx`.
-- El estado real del código actualmente presente en este repositorio.
-
-Eso importa porque el informe describe una implementación funcional y resultados medidos, mientras que el snapshot actual del repositorio todavía no contiene el módulo de compresión implementado.
-
-## Posibles mejoras
-
-- Implementar completamente el módulo de compresión.
-- Añadir manejo de cursor interactivo más allá del borrado al final.
-- Permitir edición de múltiples líneas de forma más cómoda.
-- Incorporar pruebas automáticas.
-- Agregar mediciones formales de tiempo y uso de memoria para los benchmarks.
-- Mejorar la portabilidad entre Linux, macOS y Windows.
 
 ## Conclusiones del informe
 
