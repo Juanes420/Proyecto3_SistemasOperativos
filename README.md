@@ -363,7 +363,3 @@ Los puntos destacados del informe son:
 - Verificación de integridad con `CRC32`.
 - Implementación de `Gap Buffer` como base del editor.
 - Validación del tamaño exacto del `header` con `_Static_assert`.
-
-## Licencia
-
-No se encontró una licencia definida en el repositorio. Si el proyecto va a publicarse o compartirse externamente, conviene agregar una licencia explícita.
